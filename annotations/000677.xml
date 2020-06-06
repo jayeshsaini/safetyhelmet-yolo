@@ -1,0 +1,22 @@
+<annotation>
+  <folder>images</folder>
+  <filename>000677.png</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>450</width>
+    <height>320</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Person_wearing_helmet</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>184</xmin>
+      <ymin>5</ymin>
+      <xmax>287</xmax>
+      <ymax>93</ymax>
+    </bndbox>
+  </object>
+</annotation>

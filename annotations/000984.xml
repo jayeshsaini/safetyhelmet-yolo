@@ -1,0 +1,34 @@
+<annotation>
+  <folder>images</folder>
+  <filename>000984.png</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>322</width>
+    <height>157</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Person_wearing_helmet</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>192</xmin>
+      <ymin>17</ymin>
+      <xmax>264</xmax>
+      <ymax>69</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>Person_wearing_helmet</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>29</xmin>
+      <ymin>5</ymin>
+      <xmax>74</xmax>
+      <ymax>60</ymax>
+    </bndbox>
+  </object>
+</annotation>

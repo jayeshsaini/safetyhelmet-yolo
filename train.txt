@@ -1,0 +1,1 @@
+python flow --train --annotation new_model_data/annotations --dataset new_model_data/images --model cfg/tiny-yolo-voc-1c.cfg --load -1 --epoch 400

@@ -1,0 +1,93 @@
+install open cv
+install tensorflow
+download the darkflow repo to project directory from github link : https://github.com/thtrieu/darkflow
+ https://github.com/thtrieu/darkflow
+extract the zip folder to get the darkflow-master folder
+navigate to the project directory and then navigate to darkflow-master folder via cmd
+run command python setup.py build_ext --inplace or just pip install -e .
+if an error occurs like install c++  extension or interpreter for visual studio code
+then press ctrl+shift+x and search c++ and install interpreter or extension
+
+you will notice a build file being created in the directory of darkflow-master
+now we need to download weights or pre trained models or weights
+follow the link and download the pretrained weights and model
+https://pjreddie.com/darknet/yolo/
+
+create a new folder named bin in our darkflow-master folder
+copy and paste the downloaded weights here yolo v2 608 x 608 into the bin folder
+installation is done
+
+if you want to use yolov3 model and weights download yolov3.cfg and weights from https://pjreddie.com/darknet/yolo/ or copy project from https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg and paste the .cfg in darkflow-master/cfg and weights in bin
+
+1st project: Processing a video file
+add bounding boxes to a video file to generate labels and detect object via yolo
+download a mp4 video file and move the file to dark-flow master folder for processing the image
+navigate to the folder via cmd and use the following command in terminal
+python flow --model cfg/yolo.cfg --load bin/yolov2.weights --demo videofile.mp4 --saveVideo
+
+if you recieve any error for tensorflow.contrib library that means you have latest version of tensorflow installed you need to first uninstall the latest version and then install pip install tensorflow==1.13.2
+
+or simply create a virtual environment by using command
+conda create -n tensorflow1.13.2 python=3.6
+activate tensorflow1.13.2
+
+if the above does't work use the following to create virtual environment
+python -m venv env source ./env/bin/activate
+pip install tensorflow==1.13.2
+
+or try using the following:
+python -m pip install --user tensorflow==1.13.2
+install pyx if any error occurs
+The same problem occurred for me.
+
+update setup tools by command pip install --upgrade setuptools or by python -m pip install --user --upgrade setuptools
+
+install visual c++ buildtools for your cython and python version by following https://visualstudio.microsoft.com/downloads/#other 
+
+best way to do it is installing visual studio installer and check the c++ box
+
+see on the web how to install visuall c++ compiler for python and cython
+
+
+Second project: Processing static image in python
+download a jpg image of an object example say dog
+create a python file in your project directory here yolo custom object detection
+here the file name is static_obj_detection.py
+
+packages needed : open cv (install it) and import it
+                  and import TFNet from darkflow.net.build
+
+third project: processing and detecting or classifying objects in real time via web cam or a camera.
+project name or file name is webcam1.py
+go ahead and create a python file in darkflow-master directory
+
+3rd project:
+custom_object data collection, training and detection
+data collection from online
+webscrapping, annotation, xml or format conversion to yolo
+at least 1000 images of each class to get good results
+
+this project will be broken into 3 parts:
+1) collect images of the object class (ideally more than 1000)
+2) annotate the images
+3) train and test
+
+simple way to download bulk images from google search is install an extension for chrome named "download all images" from google webstore
+extract the downloaded zip and save it in an images folder in the new_model_data directory
+                  
+next we can write a script to scan the images directory and go image by image to draw bounding boxes and genarate xml files that is annotation files and we are gonna create callbacks or functions to get mouseclicks for annotation and boundig boxes
+
+or we can use labelimg library to label images and generate annotated files for our model
+for using labelimg we would need pyqt5 for using the gui software
+
+or we can write a script
+here we will first try writing a script
+create a draw_box.py file in new_model_data_folder
+after that create annotation files and generate xml for each and every images by generate_xml.py
+
+train your model by the following command given in readme file of the repository
+https://github.com/thtrieu/darkflow scroll down to trainingon your own dataset follow the commands
+
+then make changes in your open cv code
+
+follow code in cust_obj_detect.py
